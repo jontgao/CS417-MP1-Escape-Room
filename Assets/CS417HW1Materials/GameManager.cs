@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -26,6 +27,20 @@ public class GameManager : MonoBehaviour
         if (!isGameOver)
         {
             UpdateGameTimer();
+            
+        }
+    }
+
+        public void RegisterGateMatched()
+    {
+        if (isGameOver) return;
+
+        currentMatches++;
+        UpdateScoreboard();
+
+        if (currentMatches >= totalMatches)
+        {
+            WinGame();         
         }
     }
 
@@ -50,12 +65,18 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScoreboard()
     {
-        scoreTextBox.text = string.Format("Progress:{0}/{1}", currentMatches, totalMatches);
+        scoreTextBox.text = string.Format("Progress\n{0}/{1}", currentMatches, totalMatches);
     }
 
     private void LoseGame()
     {
         Debug.Log("You Lose!");
     }
+
+    private void WinGame()
+    {
+        Debug.Log("You Win!");
+    }
+
 
 }
