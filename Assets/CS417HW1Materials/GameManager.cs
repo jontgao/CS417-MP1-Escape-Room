@@ -76,7 +76,8 @@ public class GameManager : MonoBehaviour
 
     private void WinGame()
     {
-        Debug.Log("You Win!");
+        isGameOver = true;
+        timeTextBox.text = "You Win!";
     }
 
 

@@ -6,6 +6,7 @@ public class SocketDetector : MonoBehaviour
 {
     UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket;
     public UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable key;
+    public GameManager gameManager;
 
     void Awake()
     {
@@ -34,11 +35,11 @@ public class SocketDetector : MonoBehaviour
         {
             UnityEngine.XR.Interaction.Toolkit.Interactables.IXRSelectInteractable objName = socket.interactablesSelected[0];
             
-            Debug.Log(objName.transform.name + " in socket of " + transform.name + " ");
+            //Debug.Log(objName.transform.name + " in socket of " + transform.name + " ");
 
             if (objName != null && objName == key)
             {
-                Debug.Log("Match1");
+                gameManager.RegisterGateMatched();
             }
                 
         }
