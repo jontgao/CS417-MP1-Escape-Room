@@ -7,8 +7,7 @@ public class SocketDetector : MonoBehaviour
     UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor socket;
     public UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable key;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         socket = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor>();
     }

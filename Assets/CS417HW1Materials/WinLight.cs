@@ -5,7 +5,7 @@ public class WinLight : MonoBehaviour
     private Light thisLight;
     void Start()
     {
-        thisLight = GetComponent<Light>;
+        thisLight = GetComponent<Light>();
     }
     void BrightenRoom()
     {
