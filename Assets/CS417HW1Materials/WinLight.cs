@@ -7,7 +7,7 @@ public class WinLight : MonoBehaviour
     {
         thisLight = GetComponent<Light>();
     }
-    void BrightenRoom()
+    public void BrightenRoom()
     {
         thisLight.intensity = 1000;
     }

@@ -4,16 +4,16 @@ using UnityEngine.InputSystem;
 public class LightSwitch : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public Light light;
+    public Light mylight;
     public InputActionReference action;
     void Start()
     {
-        light = GetComponent<Light>();
+        mylight = GetComponent<Light>();
 
         action.action.Enable();
         action.action.performed += (ctx) =>
         {
-            light.color = new Color(light.color.b, light.color.r, light.color.g);
+            mylight.color = new Color(mylight.color.b, mylight.color.r, mylight.color.g);
         };
     }
 

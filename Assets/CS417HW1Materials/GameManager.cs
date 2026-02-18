@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     private bool isGameOver = false;
     private int currentMatches = 0;
 
+    public Fireworks fireworks;
+    public WinLight winLights;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -78,6 +81,8 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = true;
         timeTextBox.text = "You Win!";
+        fireworks.SpawnObject();
+        winLights.BrightenRoom();
     }
 
 

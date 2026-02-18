@@ -5583,6 +5583,8 @@ MonoBehaviour:
   timeTextBox: {fileID: 1264621539}
   scoreTextBox: {fileID: 316515816}
   totalMatches: 3
+  fireworks: {fileID: 874596354}
+  winLights: {fileID: 2130967825}
 --- !u!4 &1841509209
 Transform:
   m_ObjectHideFlags: 0
