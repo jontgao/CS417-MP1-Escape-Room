@@ -5579,7 +5579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3aec2a6ecd0f411585e3f4d0c86e965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  gameTime: 60
+  gameTime: 240
   timeTextBox: {fileID: 1264621539}
   scoreTextBox: {fileID: 316515816}
   totalMatches: 3
