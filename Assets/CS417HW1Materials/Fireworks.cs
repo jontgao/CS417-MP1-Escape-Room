@@ -1,9 +1,8 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class InputTest : MonoBehaviour
+public class Fireworks : MonoBehaviour
 {
-    public InputActionProperty testActionButton;
+    public GameObject fireworksObject;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,5 +13,11 @@ public class InputTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    public void SpawnObject()
+    {
+        Instantiate(fireworksObject, transform.position, transform.rotation);
     }
 }

@@ -37,7 +37,8 @@ public class GameManager : MonoBehaviour
         {
             gameTime = 0;
             isGameOver = true;
-            LoseGame();
+            timeTextBox.text = "You Lose!";
+            return;
         }
 
         var minutes = Mathf.FloorToInt(gameTime / 60);
