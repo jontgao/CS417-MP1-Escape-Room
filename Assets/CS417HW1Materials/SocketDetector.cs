@@ -19,7 +19,17 @@ public class SocketDetector : MonoBehaviour
         
     }
 
-    public void socketCheck()
+    void OnEnable()
+    {
+        socket.selectEntered.AddListener(socketCheck);
+    }
+
+    void OnDisable()
+    {
+        socket.selectEntered.RemoveListener(socketCheck);
+    }
+
+    public void socketCheck(SelectEnterEventArgs args)
     {
         if (key)
         {
